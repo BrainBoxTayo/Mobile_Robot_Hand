@@ -1,0 +1,10 @@
+{
+    "python.analysis.extraPaths": [
+        "/home/brainboxtayo/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ],
+    "python.autoComplete.extraPaths": [
+        "/home/brainboxtayo/catkin_ws/devel/lib/python2.7/dist-packages",
+        "/opt/ros/melodic/lib/python2.7/dist-packages"
+    ]
+}
