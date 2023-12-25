@@ -3,7 +3,7 @@
 Stephen Brawner (brawner@gmail.com) 
      Commit Version: 1.6.0-4-g7f85cfe  Build Version: 1.6.7995.38578
      For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
-<robot xmlns:xacro="http://ros.org/wiki/xacro"  name="BASE_ROBOT">
+<robot xmlns:xacro="http://ros.org/wiki/xacro" name="BASE_ROBOT">
   <xacro:include filename="$(find robot_description)/urdf/BASE_ROBOT_ESSENTIALS.xacro" />
   <xacro:include filename="$(find robot_description)/urdf/gazebo_essentials_base.xacro" />
   <link name="dummy">
@@ -13,12 +13,13 @@ Stephen Brawner (brawner@gmail.com)
     <child link="base_link" />
   </joint>
   <link name="base_link">
+
     <inertial>
       <origin
         xyz="1.2182E-05 2.334E-05 0.0089063"
         rpy="0 0 0" />
       <mass
-        value="0.16211" />
+        value=".16211" />
       <inertia
         ixx="0.0001472"
         ixy="8.7863E-09"
@@ -278,8 +279,6 @@ Stephen Brawner (brawner@gmail.com)
       damping="0.1"
       friction="0.1" />
   </joint>
-
-  
   <xacro:base_transmission prefix="LBW" />
   <xacro:base_transmission prefix="LFW" />
   <xacro:base_transmission prefix="RBW" />
@@ -289,4 +288,5 @@ Stephen Brawner (brawner@gmail.com)
   <xacro:wheel_friction prefix="LFW" />
   <xacro:wheel_friction prefix="RBW" />
   <xacro:wheel_friction prefix="RFW" />
+  
 </robot>

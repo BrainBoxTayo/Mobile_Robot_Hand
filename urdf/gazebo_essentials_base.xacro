@@ -24,7 +24,7 @@
         <odometryFrame>map</odometryFrame>
         <commandTopic>cmd_vel</commandTopic>
         <odometryTopic>odom</odometryTopic>
-        <robotBaseFrame>base_link</robotBaseFrame>
+        <robotBaseFrame>dummy</robotBaseFrame>
         <wheelAcceleration>2.8</wheelAcceleration>
         <publishWheelJointState>true</publishWheelJointState>
         <publishWheelTF>false</publishWheelTF>
@@ -43,16 +43,20 @@
   </gazebo> -->
 <!--############################# Wheel friction #########################################-->
 <xacro:macro name="wheel_friction" params="prefix ">
-
 <gazebo reference="${prefix}_LINK">
+  <material>
+    Gazebo/Blue
+  </material>
  <mu1 value="1.0"/>
  <mu2 value="1.0"/>
- <kp value="10000000.0" />
- <kd value="1.0" />
- <fdir1 value="1 0 0"/>
+ <fdir value="1 0 0"/>
  <turnGravityOff>false</turnGravityOff>
 </gazebo>
-
 </xacro:macro>
 <!--######################################################################-->
+<gazebo reference="base_link">
+  <material>
+    Gazebo/Red
+  </material>
+</gazebo>
 </robot>
